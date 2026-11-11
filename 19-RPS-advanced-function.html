@@ -1,28 +1,31 @@
-<!DOCTYBE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-      <title>RPS-Game-with-css</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#080d1b">
+      <title>Rock Paper Scissors | RPS Arena</title>
       <link rel="stylesheet" href="style/19-RPS-advanced-function.css">
 
     </head>
     <body >
-      <p class="title">Rock-paper-sicissors</p>
-      <button  class="move-button js-rock-button">
-       <img class="move-image" src="pic/rock-emoji.png">
+      <p class="title">Rock Paper Scissors</p>
+      <button type="button" aria-label="Choose Rock" class="move-button js-rock-button">
+       <img class="move-image" src="pic/Rock-emoji.png" alt="">
       </button>
 
-      <button class="move-button js-paper-button">
-      <img class="move-image" src="pic/paper-emoji.png">
+      <button type="button" aria-label="Choose Paper" class="move-button js-paper-button">
+      <img class="move-image" src="pic/paper-emoji.png" alt="">
       </button>
 
-      <button class="move-button   js-sisers-button" >
-        <img class="move-image" src="pic/scissors-emoji.png">
+      <button type="button" aria-label="Choose Scissors" class="move-button   js-sisers-button" >
+        <img class="move-image" src="pic/scissors-emoji.png" alt="">
       </button>
 
-      <p class="js-result result"></p>
-      <p class="js-move move"></p>
+      <p class="js-result result" aria-live="polite"></p>
+      <p class="js-move move" aria-live="polite"></p>
       <p class="js-score scoure"></p>
-      <button class="Reset"  onclick=" 
+      <button type="button" class="Reset"  onclick="
         localStorage.removeItem('score');
          score.win=0;
          score.lose=0;
@@ -31,9 +34,10 @@
         document.querySelector('.js-result').innerHTML='';
         document.querySelector('.js-move').innerHTML='';
         ">Reset Score</button>
-        <button  onclick="autoplay();" class="auto-play-button">
+        <button type="button" onclick="autoplay();" class="auto-play-button">
           Auto play
         </button>
+        <button type="button" class="sound-button js-sound-button" aria-label="Enable sound" aria-pressed="false">🔇</button>
 
       <script src="script/19-RPS-advanced-function.js"></script>
     </body>
